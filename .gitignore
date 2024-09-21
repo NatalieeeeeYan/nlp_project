@@ -1,6 +1,8 @@
 .history/
 .DS_Store
 
+pj1/*.json
+
 pj2/.history/
 pj2/.ipynb_checkpoints/
 pj2/.vector_cache/
