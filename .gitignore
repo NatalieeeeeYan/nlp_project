@@ -1,0 +1,9 @@
+.history/
+.DS_Store
+
+pj2/.history/
+pj2/.ipynb_checkpoints/
+pj2/.vector_cache/
+
+Slides/*.pptx
+
