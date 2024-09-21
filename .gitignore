@@ -2,6 +2,8 @@
 .DS_Store
 
 pj1/*.json
+pj1/*.jsonl
+pj1/1. 环境配置与PyTorch函数实践/.ipynb_checkpoints
 
 pj2/.history/
 pj2/.ipynb_checkpoints/
