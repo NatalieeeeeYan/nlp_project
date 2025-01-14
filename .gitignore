@@ -1,16 +1,18 @@
 .history/
 .DS_Store
 
-pj1/*.json
-pj1/*.jsonl
-pj1/1. 环境配置与PyTorch函数实践/.ipynb_checkpoints
+nlp_project/pj1/*.json
+nlp_project/pj1/*.jsonl
+nlp_project/pj1/1. 环境配置与PyTorch函数实践/.ipynb_checkpoints
 
-pj2/.history/
-pj2/.ipynb_checkpoints/
-pj2/.vector_cache/
+nlp_project/pj2/.history/
+nlp_project/pj2/.ipynb_checkpoints/
+nlp_project/pj2/.vector_cache/
 
-Slides/*.pptx
+nlp_project/pj3/CHisIEC/
+nlp_project/pj3/gigaword_chn.all.a2b.uni.ite50.vecgit
 
+nlp_project/pj4/output/
+nlp_project/pj4/*.zip
 
-pj3/CHisIEC/
-pj3/gigaword_chn.all.a2b.uni.ite50.vecgit 
+Code/

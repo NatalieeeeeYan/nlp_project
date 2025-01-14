@@ -1,0 +1,446 @@
+@misc{ouyang2022traininglanguagemodelsfollow,
+      title={Training language models to follow instructions with human feedback}, 
+      author={Long Ouyang and Jeff Wu and Xu Jiang and Diogo Almeida and Carroll L. Wainwright and Pamela Mishkin and Chong Zhang and Sandhini Agarwal and Katarina Slama and Alex Ray and John Schulman and Jacob Hilton and Fraser Kelton and Luke Miller and Maddie Simens and Amanda Askell and Peter Welinder and Paul Christiano and Jan Leike and Ryan Lowe},
+      year={2022},
+      eprint={2203.02155},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2203.02155}, 
+}
+
+@article{anil2023palm,
+  title={Palm 2 technical report},
+  author={Anil, Rohan and Dai, Andrew M and Firat, Orhan and Johnson, Melvin and Lepikhin, Dmitry and Passos, Alexandre and Shakeri, Siamak and Taropa, Emanuel and Bailey, Paige and Chen, Zhifeng and others},
+  journal={arXiv preprint arXiv:2305.10403},
+  year={2023}
+}
+
+@misc{raffel2023exploringlimitstransferlearning,
+      title={Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer}, 
+      author={Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+      year={2023},
+      eprint={1910.10683},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1910.10683}, 
+}
+
+@inproceedings{min-etal-2022-metaicl,
+    title = "{M}eta{ICL}: Learning to Learn In Context",
+    author = "Min, Sewon  and
+      Lewis, Mike  and
+      Zettlemoyer, Luke  and
+      Hajishirzi, Hannaneh",
+    editor = "Carpuat, Marine  and
+      de Marneffe, Marie-Catherine  and
+      Meza Ruiz, Ivan Vladimir",
+    booktitle = "Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies",
+    month = jul,
+    year = "2022",
+    address = "Seattle, United States",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2022.naacl-main.201",
+    doi = "10.18653/v1/2022.naacl-main.201",
+    pages = "2791--2809",
+    abstract = "We introduce MetaICL (Meta-training for In-Context Learning), a new meta-training framework for few-shot learning where a pretrained language model is tuned to do in-context learning on a large set of training tasks. This meta-training enables the model to more effectively learn a new task in context at test time, by simply conditioning on a few training examples with no parameter updates or task-specific templates. We experiment on a large, diverse collection of tasks consisting of 142 NLP datasets including classification, question answering, natural language inference, paraphrase detection and more, across seven different meta-training/target splits. MetaICL outperforms a range of baselines including in-context learning without meta-training and multi-task learning followed by zero-shot transfer. We find that the gains are particularly significant for target tasks that have domain shifts from the meta-training tasks, and that using a diverse set of the meta-training tasks is key to improvements. We also show that MetaICL approaches (and sometimes beats) the performance of models fully finetuned on the target task training data, and outperforms much bigger models with nearly 8x parameters.",
+}
+
+@InProceedings{pmlr-v202-jiang23k,
+  title = 	 {Effective Structured Prompting by Meta-Learning and Representative Verbalizer},
+  author =       {Jiang, Weisen and Zhang, Yu and Kwok, James},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {15186--15199},
+  year = 	 {2023},
+  editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {23--29 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v202/jiang23k/jiang23k.pdf},
+  url = 	 {https://proceedings.mlr.press/v202/jiang23k.html},
+  abstract = 	 {Prompt tuning for pre-trained masked language models (MLM) has shown promising performance in natural language processing tasks with few labeled examples. It tunes a prompt for the downstream task, and a verbalizer is used to bridge the predicted token and label prediction. Due to the limited training data, prompt initialization is crucial for prompt tuning. Recently, MetaPrompting (Hou et al., 2022) uses meta-learning to learn a shared initialization for all task-specific prompts. However, a single initialization is insufficient to obtain good prompts for all tasks and samples when the tasks are complex. Moreover, MetaPrompting requires tuning the whole MLM, causing a heavy burden on computation and memory as the MLM is usually large. To address these issues, we use a prompt pool to extract more task knowledge and construct instance-dependent prompts via attention. We further propose a novel soft verbalizer (RepVerb) which constructs label embedding from feature embeddings directly. Combining meta-learning the prompt pool and RepVerb, we propose MetaPrompter for effective structured prompting. MetaPrompter is parameter-efficient as only the pool is required to be tuned. Experimental results demonstrate that MetaPrompter performs better than the recent state-of-the-arts and RepVerb outperforms existing soft verbalizers.}
+}
+
+@inproceedings{devlin-etal-2019-bert,
+    title = "{BERT}: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    author = "Devlin, Jacob  and
+      Chang, Ming-Wei  and
+      Lee, Kenton  and
+      Toutanova, Kristina",
+    editor = "Burstein, Jill  and
+      Doran, Christy  and
+      Solorio, Thamar",
+    booktitle = "Proceedings of the 2019 Conference of the North {A}merican Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers)",
+    month = jun,
+    year = "2019",
+    address = "Minneapolis, Minnesota",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/N19-1423",
+    doi = "10.18653/v1/N19-1423",
+    pages = "4171--4186",
+    abstract = "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models (Peters et al., 2018a; Radford et al., 2018), BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks, such as question answering and language inference, without substantial task-specific architecture modifications. BERT is conceptually simple and empirically powerful. It obtains new state-of-the-art results on eleven natural language processing tasks, including pushing the GLUE score to 80.5 (7.7 point absolute improvement), MultiNLI accuracy to 86.7{\%} (4.6{\%} absolute improvement), SQuAD v1.1 question answering Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1 (5.1 point absolute improvement).",
+}
+
+@misc{wei2024magicoderempoweringcodegeneration,
+      title={Magicoder: Empowering Code Generation with OSS-Instruct}, 
+      author={Yuxiang Wei and Zhe Wang and Jiawei Liu and Yifeng Ding and Lingming Zhang},
+      year={2024},
+      eprint={2312.02120},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2312.02120}, 
+}
+
+@misc{wei2024magicoderempoweringcodegeneration,
+      title={Magicoder: Empowering Code Generation with OSS-Instruct}, 
+      author={Yuxiang Wei and Zhe Wang and Jiawei Liu and Yifeng Ding and Lingming Zhang},
+      year={2024},
+      eprint={2312.02120},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2312.02120}, 
+}
+
+@misc{zhou2023instructionfollowingevaluationlargelanguage,
+      title={Instruction-Following Evaluation for Large Language Models}, 
+      author={Jeffrey Zhou and Tianjian Lu and Swaroop Mishra and Siddhartha Brahma and Sujoy Basu and Yi Luan and Denny Zhou and Le Hou},
+      year={2023},
+      eprint={2311.07911},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2311.07911}, 
+}
+
+@misc{lei2024instructercreformingemotionrecognition,
+      title={InstructERC: Reforming Emotion Recognition in Conversation with Multi-task Retrieval-Augmented Large Language Models}, 
+      author={Shanglin Lei and Guanting Dong and Xiaoping Wang and Keheng Wang and Runqi Qiao and Sirui Wang},
+      year={2024},
+      eprint={2309.11911},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2309.11911}, 
+}
+
+@inproceedings{DBLP:conf/nips/Wei0SBIXCLZ22,
+  author       = {Jason Wei and
+                  Xuezhi Wang and
+                  Dale Schuurmans and
+                  Maarten Bosma and
+                  Brian Ichter and
+                  Fei Xia and
+                  Ed H. Chi and
+                  Quoc V. Le and
+                  Denny Zhou},
+  editor       = {Sanmi Koyejo and
+                  S. Mohamed and
+                  A. Agarwal and
+                  Danielle Belgrave and
+                  K. Cho and
+                  A. Oh},
+  title        = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  booktitle    = {Advances in Neural Information Processing Systems 35: Annual Conference
+                  on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans,
+                  LA, USA, November 28 - December 9, 2022},
+  year         = {2022},
+  url          = {http://papers.nips.cc/paper\_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html},
+  timestamp    = {Tue, 12 Nov 2024 16:50:49 +0100},
+  biburl       = {https://dblp.org/rec/conf/nips/Wei0SBIXCLZ22.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@misc{taylor2022galacticalargelanguagemodel,
+      title={Galactica: A Large Language Model for Science}, 
+      author={Ross Taylor and Marcin Kardas and Guillem Cucurull and Thomas Scialom and Anthony Hartshorn and Elvis Saravia and Andrew Poulton and Viktor Kerkez and Robert Stojnic},
+      year={2022},
+      eprint={2211.09085},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2211.09085}, 
+}
+
+@misc{lewkowycz2022solvingquantitativereasoningproblems,
+      title={Solving Quantitative Reasoning Problems with Language Models}, 
+      author={Aitor Lewkowycz and Anders Andreassen and David Dohan and Ethan Dyer and Henryk Michalewski and Vinay Ramasesh and Ambrose Slone and Cem Anil and Imanol Schlag and Theo Gutman-Solo and Yuhuai Wu and Behnam Neyshabur and Guy Gur-Ari and Vedant Misra},
+      year={2022},
+      eprint={2206.14858},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2206.14858}, 
+}
+@inproceedings{
+    hu2022lora,
+    title={Lo{RA}: Low-Rank Adaptation of Large Language Models},
+    author={Edward J Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
+    booktitle={International Conference on Learning Representations},
+    year={2022},
+    url={https://openreview.net/forum?id=nZeVKeeFYf9}
+}
+@misc{li2021prefixtuning,
+      title={Prefix-Tuning: Optimizing Continuous Prompts for Generation}, 
+      author={Xiang Lisa Li and Percy Liang},
+      year={2021},
+      eprint={2101.00190},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+@article{cobbe2021training,
+  title={Training verifiers to solve math word problems},
+  author={Cobbe, Karl and Kosaraju, Vineet and Bavarian, Mohammad and Chen, Mark and Jun, Heewoo and Kaiser, Lukasz and Plappert, Matthias and Tworek, Jerry and Hilton, Jacob and Nakano, Reiichiro and others},
+  journal={arXiv preprint arXiv:2110.14168},
+  year={2021}
+}
+@article{hendrycksmath2021,
+  title={Measuring Mathematical Problem Solving With the MATH Dataset},
+  author={Dan Hendrycks and Collin Burns and Saurav Kadavath and Akul Arora and Steven Basart and Eric Tang and Dawn Song and Jacob Steinhardt},
+  journal={NeurIPS},
+  year={2021}
+}
+
+@article{zhang2024refaug,
+  title={Learn Beyond The Answer: Training Language Models with Reflection for Mathematical Reasoning},
+  author={Zhang, Zhihan and Liang, Zhenwen and Yu, Wenhao and Yu, Dian and Jia, Mengzhao and Yu, Dong and Jiang, Meng},
+  journal={ArXiv preprint},
+  volume={2406.12050},
+  year={2024}
+}
+@misc{qwen2.5,
+    title = {Qwen2.5: A Party of Foundation Models},
+    url = {https://qwenlm.github.io/blog/qwen2.5/},
+    author = {{Qwen Team}},
+    month = {September},
+    year = {2024}
+}
+@article{hendrycks2021measuring,
+  title={Measuring mathematical problem solving with the math dataset},
+  author={Hendrycks, Dan and Burns, Collin and Kadavath, Saurav and Arora, Akul and Basart, Steven and Tang, Eric and Song, Dawn and Steinhardt, Jacob},
+  journal={arXiv preprint arXiv:2103.03874},
+  year={2021}
+}
+
+@misc{yuan2023scalingrelationshiplearningmathematical,
+      title={Scaling Relationship on Learning Mathematical Reasoning with Large Language Models}, 
+      author={Zheng Yuan and Hongyi Yuan and Chengpeng Li and Guanting Dong and Keming Lu and Chuanqi Tan and Chang Zhou and Jingren Zhou},
+      year={2023},
+      eprint={2308.01825},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2308.01825}, 
+}
+
+@misc{luo2023wizardmathempoweringmathematicalreasoning,
+      title={WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct}, 
+      author={Haipeng Luo and Qingfeng Sun and Can Xu and Pu Zhao and Jianguang Lou and Chongyang Tao and Xiubo Geng and Qingwei Lin and Shifeng Chen and Dongmei Zhang},
+      year={2023},
+      eprint={2308.09583},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2308.09583}, 
+}
+
+@misc{yu2024metamathbootstrapmathematicalquestions,
+      title={MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models}, 
+      author={Longhui Yu and Weisen Jiang and Han Shi and Jincheng Yu and Zhengying Liu and Yu Zhang and James T. Kwok and Zhenguo Li and Adrian Weller and Weiyang Liu},
+      year={2024},
+      eprint={2309.12284},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2309.12284}, 
+}
+
+@article{Lightman2023LetsVS,
+  title={Let's Verify Step by Step},
+  author={Hunter Lightman and Vineet Kosaraju and Yura Burda and Harrison Edwards and Bowen Baker and Teddy Lee and Jan Leike and John Schulman and Ilya Sutskever and Karl Cobbe},
+  journal={ArXiv},
+  year={2023},
+  volume={abs/2305.20050},
+  url={https://api.semanticscholar.org/CorpusID:258987659}
+}
+
+@article{Huang_2024,
+   title={A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions},
+   ISSN={1558-2868},
+   url={http://dx.doi.org/10.1145/3703155},
+   DOI={10.1145/3703155},
+   journal={ACM Transactions on Information Systems},
+   publisher={Association for Computing Machinery (ACM)},
+   author={Huang, Lei and Yu, Weijiang and Ma, Weitao and Zhong, Weihong and Feng, Zhangyin and Wang, Haotian and Chen, Qianglong and Peng, Weihua and Feng, Xiaocheng and Qin, Bing and Liu, Ting},
+   year={2024},
+   month=nov }
+
+@inproceedings{DBLP:conf/nips/Wei0SBIXCLZ22,
+  author       = {Jason Wei and
+                  Xuezhi Wang and
+                  Dale Schuurmans and
+                  Maarten Bosma and
+                  Brian Ichter and
+                  Fei Xia and
+                  Ed H. Chi and
+                  Quoc V. Le and
+                  Denny Zhou},
+  editor       = {Sanmi Koyejo and
+                  S. Mohamed and
+                  A. Agarwal and
+                  Danielle Belgrave and
+                  K. Cho and
+                  A. Oh},
+  title        = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  booktitle    = {Advances in Neural Information Processing Systems 35: Annual Conference
+                  on Neural Information Processing Systems 2022, NeurIPS 2022, New Orleans,
+                  LA, USA, November 28 - December 9, 2022},
+  year         = {2022},
+  url          = {http://papers.nips.cc/paper\_files/paper/2022/hash/9d5609613524ecf4f15af0f7b31abca4-Abstract-Conference.html},
+  timestamp    = {Tue, 12 Nov 2024 16:50:49 +0100},
+  biburl       = {https://dblp.org/rec/conf/nips/Wei0SBIXCLZ22.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@article{yuan2023well,
+  title={How well do large language models perform in arithmetic tasks?},
+  author={Yuan, Zheng and Yuan, Hongyi and Tan, Chuanqi and Wang, Wei and Huang, Songfang},
+  journal={arXiv preprint arXiv:2304.02015},
+  year={2023}
+}
+
+@article{lightman2023let,
+  title={Let's verify step by step},
+  author={Lightman, Hunter and Kosaraju, Vineet and Burda, Yura and Edwards, Harri and Baker, Bowen and Lee, Teddy and Leike, Jan and Schulman, John and Sutskever, Ilya and Cobbe, Karl},
+  journal={arXiv preprint arXiv:2305.20050},
+  year={2023}
+}
+
+@misc{yu2024metamathbootstrapmathematicalquestions,
+      title={MetaMath: Bootstrap Your Own Mathematical Questions for Large Language Models}, 
+      author={Longhui Yu and Weisen Jiang and Han Shi and Jincheng Yu and Zhengying Liu and Yu Zhang and James T. Kwok and Zhenguo Li and Adrian Weller and Weiyang Liu},
+      year={2024},
+      eprint={2309.12284},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2309.12284}, 
+}
+
+@article{tao2024survey,
+  title={A survey on self-evolution of large language models},
+  author={Tao, Zhengwei and Lin, Ting-En and Chen, Xiancai and Li, Hangyu and Wu, Yuchuan and Li, Yongbin and Jin, Zhi and Huang, Fei and Tao, Dacheng and Zhou, Jingren},
+  journal={arXiv preprint arXiv:2404.14387},
+  year={2024}
+}
+
+@article{yue2309mammoth,
+  title={Mammoth: Building math generalist models through hybrid instruction tuning, 2023},
+  author={Yue, Xiang and Qu, Xingwei and Zhang, Ge and Fu, Yao and Huang, Wenhao and Sun, Huan and Su, Yu and Chen, Wenhu},
+  journal={URL https://arxiv. org/abs/2309.05653},
+  year={2023}
+}
+
+@article{yu2023metamath,
+  title={Metamath: Bootstrap your own mathematical questions for large language models},
+  author={Yu, Longhui and Jiang, Weisen and Shi, Han and Yu, Jincheng and Liu, Zhengying and Zhang, Yu and Kwok, James T and Li, Zhenguo and Weller, Adrian and Liu, Weiyang},
+  journal={arXiv preprint arXiv:2309.12284},
+  year={2023}
+}
+
+@article{yuan2023scaling,
+  title={Scaling relationship on learning mathematical reasoning with large language models},
+  author={Yuan, Zheng and Yuan, Hongyi and Li, Chengpeng and Dong, Guanting and Lu, Keming and Tan, Chuanqi and Zhou, Chang and Zhou, Jingren},
+  journal={arXiv preprint arXiv:2308.01825},
+  year={2023}
+}
+
+@inproceedings{feng-etal-2021-survey,
+    title = "A Survey of Data Augmentation Approaches for {NLP}",
+    author = "Feng, Steven Y.  and
+      Gangal, Varun  and
+      Wei, Jason  and
+      Chandar, Sarath  and
+      Vosoughi, Soroush  and
+      Mitamura, Teruko  and
+      Hovy, Eduard",
+    editor = "Zong, Chengqing  and
+      Xia, Fei  and
+      Li, Wenjie  and
+      Navigli, Roberto",
+    booktitle = "Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021",
+    month = aug,
+    year = "2021",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-acl.84",
+    doi = "10.18653/v1/2021.findings-acl.84",
+    pages = "968--988",
+}
+
+@inproceedings{wang-etal-2023-self-instruct,
+    title = "Self-Instruct: Aligning Language Models with Self-Generated Instructions",
+    author = "Wang, Yizhong  and
+      Kordi, Yeganeh  and
+      Mishra, Swaroop  and
+      Liu, Alisa  and
+      Smith, Noah A.  and
+      Khashabi, Daniel  and
+      Hajishirzi, Hannaneh",
+    editor = "Rogers, Anna  and
+      Boyd-Graber, Jordan  and
+      Okazaki, Naoaki",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.754",
+    doi = "10.18653/v1/2023.acl-long.754",
+    pages = "13484--13508",
+    abstract = "Large {``}instruction-tuned{''} language models (i.e., finetuned to respond to instructions) have demonstrated a remarkable ability to generalize zero-shot to new tasks. Nevertheless, they depend heavily on human-written instruction data that is often limited in quantity, diversity, and creativity, therefore hindering the generality of the tuned model. We introduce Self-Instruct, a framework for improving the instruction-following capabilities of pretrained language models by bootstrapping off their own generations. Our pipeline generates instructions, input, and output samples from a language model, then filters invalid or similar ones before using them to finetune the original model. Applying our method to the vanilla GPT3, we demonstrate a 33{\%} absolute improvement over the original model on Super-NaturalInstructions, on par with the performance of InstructGPT-001, which was trained with private user data and human annotations. For further evaluation, we curate a set of expert-written instructions for novel tasks, and show through human evaluation that tuning GPT3 with Self-Instruct outperforms using existing public instruction datasets by a large margin, leaving only a 5{\%} absolute gap behind InstructGPT-001. Self-Instruct provides an almost annotation-free method for aligning pre-trained language models with instructions, and we release our large synthetic dataset to facilitate future studies on instruction tuning.",
+}
+
+@article{ding2023enhancing,
+  title={Enhancing chat language models by scaling high-quality instructional conversations},
+  author={Ding, Ning and Chen, Yulin and Xu, Bokai and Qin, Yujia and Zheng, Zhi and Hu, Shengding and Liu, Zhiyuan and Sun, Maosong and Zhou, Bowen},
+  journal={arXiv preprint arXiv:2305.14233},
+  year={2023}
+}
+
+@article{wei2022chain,
+  title={Chain-of-thought prompting elicits reasoning in large language models},
+  author={Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten and Xia, Fei and Chi, Ed and Le, Quoc V and Zhou, Denny and others},
+  journal={Advances in neural information processing systems},
+  volume={35},
+  pages={24824--24837},
+  year={2022}
+}
+
+@article{wang2022self,
+  title={Self-consistency improves chain of thought reasoning in language models},
+  author={Wang, Xuezhi and Wei, Jason and Schuurmans, Dale and Le, Quoc and Chi, Ed and Narang, Sharan and Chowdhery, Aakanksha and Zhou, Denny},
+  journal={arXiv preprint arXiv:2203.11171},
+  year={2022}
+}
+
+@article{lewkowycz2022solving,
+  title={Solving quantitative reasoning problems with language models, 2022},
+  author={Lewkowycz, Aitor and Andreassen, Anders and Dohan, David and Dyer, Ethan and Michalewski, Henryk and Ramasesh, Vinay and Slone, Ambrose and Anil, Cem and Schlag, Imanol and Gutman-Solo, Theo and others},
+  journal={URL https://arxiv. org/abs/2206.14858},
+  year={2022}
+}
+
+@article{creswell2022selection,
+  title={Selection-inference: Exploiting large language models for interpretable logical reasoning},
+  author={Creswell, Antonia and Shanahan, Murray and Higgins, Irina},
+  journal={arXiv preprint arXiv:2205.09712},
+  year={2022}
+}
+
+@article{kojima2022large,
+  title={Large language models are zero-shot reasoners},
+  author={Kojima, Takeshi and Gu, Shixiang Shane and Reid, Machel and Matsuo, Yutaka and Iwasawa, Yusuke},
+  journal={Advances in neural information processing systems},
+  volume={35},
+  pages={22199--22213},
+  year={2022}
+}
+
+@article{li2023query,
+  title={Query and response augmentation cannot help out-of-domain math reasoning generalization},
+  author={Li, Chengpeng and Yuan, Zheng and Dong, Guanting and Lu, Keming and Wu, Jiancan and Tan, Chuanqi and Wang, Xiang and Zhou, Chang},
+  journal={arXiv preprint arXiv:2310.05506},
+  year={2023}
+}

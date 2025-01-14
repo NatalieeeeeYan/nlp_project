@@ -1,0 +1,89 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+\PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2024
+
+
+% ready for submission
+% \usepackage{neurips_2024}
+
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+\usepackage[preprint]{neurips_2024}
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2024}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{neurips_2024}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+\usepackage{ctex}           % 中文支持
+\usepackage[numbers]{natbib}  
+\usepackage{graphicx}
+\title{通过高效微调与数据增强提高大语言模型数学推理能力}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  游年浩\thanks{这些作者贡献相同}\\
+  复旦大学 \\
+  上海市杨浦区邯郸路220号 \\
+  \texttt{nhyou21@m.fudan.edu.cn} \\
+  \And
+  宋文彦\footnotemark[1]\\
+  复旦大学 \\
+  上海市杨浦区邯郸路220号 \\
+  \texttt{wysong21@m.fudan.edu.cn} \\
+  \And
+  钟思祺\footnotemark[1]\\ 
+  复旦大学 \\
+  上海市杨浦区邯郸路220号 \\
+  \texttt{sqzhong21@m.fudan.edu.cn} \\
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\begin{abstract}
+  在自然语言处理（NLP）领域，大型语言模型（LLMs）在多种任务中展现出卓越性能，其中包括数学推理。然而，数学推理任务中的错误可能导致整个解决过程的破坏。为了提升LLMs的数学推理能力，研究者通常在监督推理数据集上进行微调。本研究探讨了在有限模型参数规模和计算资源条件下，如何通过高效微调和数据增强提高小型LLM的数学推理性能。我们发现，低秩近似（LoRA）训练、数据集增强和前缀调优（Prefix-Tuning）等方法能够在不显著增加计算成本的情况下，有效提升模型的推理能力。实验结果显示，数据增强方法在GSM8K和MATH数据集上的准确率分别达到了37.07\%和8.00\%，而Prefix-Tuning方法在这两个数据集上的准确率分别达到了57.47\%和11.40\%，相较于基准实验有显著提升。本研究不仅为未来研究提供了新的方向，也为资源受限的挑战提供了务实的解决方案。
+\end{abstract}
+
+
+\input{sections/introduction}
+\input{sections/relatedwork}
+\input{sections/methodology}
+\input{sections/experiments}
+\input{sections/limitation}
+\input{sections/conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{ref}
+
+\appendix
+\input{sections/personalcontribution}
+
+\end{document}

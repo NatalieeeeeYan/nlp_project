@@ -1,0 +1,24 @@
+\section{引言}
+\label{sec:introduction}
+在自然语言处理（NLP）领域，大型语言模型（LLMs）\citep{ouyang2022traininglanguagemodelsfollow, anil2023palm, raffel2023exploringlimitstransferlearning}，在各种任务中表现出卓越的性能，包括文本分类\citep{min-etal-2022-metaicl,pmlr-v202-jiang23k,devlin-etal-2019-bert}、代码生成\citep{wei2024magicoderempoweringcodegeneration}、指令跟随\citep{zhou2023instructionfollowingevaluationlargelanguage,lei2024instructercreformingemotionrecognition}和数学推理\citep{DBLP:conf/nips/Wei0SBIXCLZ22, taylor2022galacticalargelanguagemodel, lewkowycz2022solvingquantitativereasoningproblems}。在这些任务中，处理数学推理的能力已成为评估不同LLMs能力的典型且重要的标准\citep{cobbe2021training,hendrycks2021measuring}。然而，数学推理任务中面临的一个主要挑战是，即便是一个轻微的错误也可能破坏整个解决过程\citep{Lightman2023LetsVS}。
+
+通常，为了增强LLMs的数学推理能力，研究人员会在监督推理数据集上进行微调。为提高开源LLMs的数学推理能力，一系列工作应用于这一领域，其中一种主流方法是先扩充新的数学问题和答案，然后在增强数据集上进行监督微调\citep{yuan2023scalingrelationshiplearningmathematical, luo2023wizardmathempoweringmathematicalreasoning, yu2024metamathbootstrapmathematicalquestions}，这种方法已经取得了良好的结果。然而，在有限的模型参数规模（如0.5亿参数）和计算资源条件下，微调小规模LLM以提升数学推理性能依然存在以下挑战：
+(1) 模型规模限制：小规模的模型可能缺乏足够的参数来有效捕捉复杂的数学推理关系。
+(2) 数据稀缺性：高质量的数学推理数据集相对稀少，这限制了模型的训练效果。
+(3) 计算资源限制：有限的硬件资源限制了长时间、大规模的训练过程，且可能不适合现有的大型数据集。
+
+在对现有方法和模型的评估中，我们发现虽然大型语言模型在数学推理方面取得了显著进展，但其在处理复杂数学问题时仍常出现不足。具体来说，模型在推理过程中容易面临以下问题：对问题背景的理解不够深入，缺乏将多个步骤有效连接的能力\citep{Huang_2024}，以及在面对不熟悉或新颖问题时表现出不稳定性。这些问题突显出当前模型在表达和推理能力上的局限。加之，相较于其他自然语言处理任务，数学推理任务需要对数量信息和逻辑关系有更深刻的理解和处理能力，这为模型设计和训练提出了更高的要求。
+
+尽管在许多任务中通过扩展训练数据集已被验证为一种有效的提升手段\citep{tao2024survey}，但数学推理任务的数据集仍较为稀缺且难以构建。这些因素都增加了训练和微调过程的复杂性，尤其是在资源有限的情况下。因此，需深入分析如何在小参数规模和有限算力资源下，优化模型的数学推理能力，以实现性能的进一步提升。考虑到这些因素，我们的研究旨在通过诸多创新性方法和策略来克服这些挑战。
+
+基于这些挑战，我们的研究提供了以下见解：(1) LoRA训练：通过运用低秩近似技术调节模型参数，这种方法能够显著降低计算开销，使其适合于资源有限的场景。我们发现这种方法在保持模型性能的同时减少了计算资源的消耗。(2) 数据集增强：通过扩展和丰富数学推理数据集，可以有效提升模型的泛化能力，使其更好地应对多样化的问题情境。这一策略不仅增强了模型对已知问题的处理能力，也提高了其解决新问题的潜力。(3) Prefix-Tuning：此方法通过为输入提供特定前缀进行优化，提供了一种灵活整合额外知识的途径，而无需对模型的大规模参数进行调整。它为模型在动态环境下的适应能力提供了支持。
+
+通过对上述方法的仔细分析，我们进一步认识到，结合这些技术可以在不增加过多计算负担的情况下，有效地增强模型的推理能力。这些见解不仅为未来的研究提供了新的方向，也为应对资源受限的挑战提供了务实的解决方案。
+
+我们的贡献包括：  
+
+\begin{itemize}  
+    \item 完成了Qwen2.5-0.5B SFT的测试，结果显示在GSM8K和MATH上的准确率表现分别为34.27\%和7.00\%。
+    \item 详细探索和验证了一系列在受限环境下微调LLM的策略，创新性地应用了LoRA、数据增强和Prefix-Tuning方法，在有限的参数规模和计算资源条件下，实现了对标准模型的显著性能提升。
+    \item 数据增强方法在GSM8K和MATH上准确率分别达到了37.07\%和8.00\%，Prefix-Tuning方法在GSM8K和MATH上准确率分别达到了57.47\%和11.40\%，对比基准实验有显著提升，证明其在实际应用中的可行性。
+\end{itemize}

@@ -1,0 +1,9 @@
+\section{相关工作}
+\label{sec:relatedwork}
+
+\textbf{大型语言模型的数学推理  } 大型语言模型的数学推理能力是一个关键能力\citep{yuan2023well}。通过数学相关的预训练\citep{lightman2023let}和数学相关的监督微调\citep{yu2024metamathbootstrapmathematicalquestions}，LLM的数学推理能力可以得到增强。为了通过监督微调提升数学推理能力，这种方法通常涉及利用更大规模的模型或手动收集高质量数据\citep{tao2024survey}。MetaMath\citep{yu2023metamath}通过重写数学查询并在LLM的帮助下提供答案来扩展其数据集。MAmmoTH\citep{yue2309mammoth}编制了多样化的数学数据集用于训练，通过包含推理的思维链（CoT）和思维程序（PoT）推理理由来丰富数据集，从而形成了MathInstruct数据集。RFT\citep{yuan2023scaling}是一种标准在线RL的简化离线方法。它通过SFT模型生成和收集准确的推理路径来增强其训练数据集。
+
+\textbf{思维链推理 } 语言模型多步推理的重要方法是由Wei等人\citep{wei2022chain}提出的思维链提示。他们指出，推理能力只能通过思维链触发，而不是通过直接给出答案的标准提示。后续研究表明，思维链可通过自我一致性\citep{wang2022self}、latex格式的数据预训练\citep{lewkowycz2022solving}、上下文选择\citep{creswell2022selection}，甚至添加短语“Let’s think step by step”\citep{kojima2022large}得到改进。原始CoT论文使用8个手动编写的示例作为提示，这些示例被大多数后续研究采用。
+
+\textbf{大型语言模型的数据增强 }  数据增强是提高NLP下游任务表现的常用技术\citep{feng-etal-2021-survey}。在大型语言模型时代，数据增强通常用于生成遵循指令的SFT数据集\citep{wang-etal-2023-self-instruct}。SFT数据集的查询和响应\citep{ding2023enhancing}都可以通过提示最先进的专有LLM进行增强。
+
